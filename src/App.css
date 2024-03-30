@@ -1,5 +1,5 @@
 #root {
-  width: 100%;
+  width: 100vi;
   height: 100%;
 }
 
@@ -55,17 +55,52 @@
 
 .league-icon {
   height: 42vh;
-  background-color: red;
-
+  display: flex;
+  justify-content: center;
 }
 
-.league-input {
-  height: 20vh;
-  background-color: aqua;
+.league-icon img {
+  margin: 20px;
+  max-height: 100%;
+  padding: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
 }
+
+.change-league {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.league-submit {
+  height: 10vh;
+  width: 100vi;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.league-submit button {
+  padding: 0px 40px;
+}
+
+
 
 .league-button {
   height: 20vh;
-  background-color: green;
+  display: flex;
+  justify-content: center;
+}
 
+.league-button button {
+  margin-top: 20px;
+}
+
+.leagues {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
 }
