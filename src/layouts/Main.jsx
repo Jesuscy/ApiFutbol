@@ -5,6 +5,8 @@ import LigaIng from "../../public/img/PremierLeague.png"
 import LigaItl from "../../public/img/LegaCalcio.png"
 import LigaFr from "../../public/img/Ligue1.png"
 import LigaAl from "../../public/img/BundesligaLogo.png"
+import btnSiguiente from "../../public/img/next-arrow.png"
+import btnAnterior from "../../public/img/back-arrow.png"
 
 export const Main = () => {
     //UseState -> SetLiga()
@@ -18,8 +20,8 @@ export const Main = () => {
     const mostrarLiga = (index) => {
         return (
             <div className="row leagues">
-                <div className="col-md-2 change-league">
-                    <button type="button" class="btn btn-secondary btn-lg" onClick={() => {
+                <div className="col-md-2 col-sm-2 col-xs-12 change-league">
+                    <button type="button" class="btn btn-lg league-button" onClick={() => {
                         if (liga > 0) {
                             setLiga(liga - 1);
                             setInputVal(ligas[liga].nombre)
@@ -28,15 +30,19 @@ export const Main = () => {
                             setInputVal(ligas[liga].nombre)
 
                         }
-                    }}>LIGA ANTERIOR</button >
+
+                    }}>
+                        LIGA ANTERIOR
+                        <img src={btnAnterior}></img>
+                    </button >
 
                 </div>
 
-                <div className="col-md-8 league-icon">
-                    <img src={ligas[index].img} />
+                <div className="col-md-6 col-sm-6 col-xs-12 league-icon">
+                    <img src={ligas[index].img} className="transition-img" />
                 </div>
-                <div className="col-md-2 change-league">
-                    <button type="button" class="btn btn-secondary btn-lg" onClick={() => {
+                <div className="col-md-2 col-sm-2 col-xs-12 change-league">
+                    <button type="button" class="btn btn-lg league-button" onClick={() => {
                         if (liga < ligas.length - 1) {
                             setLiga(liga + 1);
                             setInputVal(ligas[liga].nombre)
@@ -46,7 +52,10 @@ export const Main = () => {
                             setInputVal(ligas[liga].nombre)
 
                         }
-                    }}>LIGA SIGUIENTE</button >
+                    }}>
+                        LIGA SIGUIENTE
+                        <img src={btnSiguiente}></img>
+                    </button >
 
                 </div>
             </div>
@@ -64,12 +73,12 @@ export const Main = () => {
                     {mostrarLiga(liga)}
                 </div>
                 <div className="row">
-                    <div className="col-md-2"></div>
-                    <div className="col-md-8 league-submit">
+                    <div className="col-md-2 col-sm-2 col-xs-12"></div>
+                    <div className="col-md-8 col-sm-8 col-xs-12 league-submit">
                         <button type="button" class="btn btn-primary btn-lg">Ir a la {ligas[liga].nombre}</button>
 
                     </div>
-                    <div className="col-md-2"></div>
+                    <div className="col-md-2 col-sm-2 col-xs-12"></div>
 
                 </div>
 
