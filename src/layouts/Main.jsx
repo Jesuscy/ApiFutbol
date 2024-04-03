@@ -9,6 +9,13 @@ import btnSiguiente from "../../public/img/next-arrow.png"
 import btnAnterior from "../../public/img/back-arrow.png"
 
 export const Main = () => {
+    //Urls Axios --> Api.
+    const Premier_League_URL = 'http://api.football-data.org/v4/competitions/PL/teams'
+    const Bundesliga_URL = 'http://api.football-data.org/v4/competitions/BL1/teams'
+    const Lega_Calcio_URL = 'http://api.football-data.org/v4/competitions/SA/teams'
+    const La_Liga_URL = 'http://api.football-data.org/v4/competitions/PD/teams'
+    const Ligue_1_URL = 'http://api.football-data.org/v4/competitions/FL1/teams'
+
     //UseState -> SetLiga()
     const [liga, setLiga] = useState(0)
     const [inputVal, setInputVal] = useState("")
