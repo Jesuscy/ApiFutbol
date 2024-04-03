@@ -23,7 +23,6 @@
 .header-img {
   width: 25%;
   height: 15vh;
-  text-align: center;
 
 }
 
@@ -99,6 +98,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10px
 }
 
 .change-league :hover {
