@@ -69,7 +69,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70vh;
+  height: 71vh;
 }
 
 .league-icon {
@@ -132,13 +132,17 @@
 
 /*(INICIO --- LEAGUE_TEAMS JSX STYLES*/
 .teams-list-container {
-  height: 100vh;
-  width: 100vi;
+  display: flex;
+  flex-direction: column;
+  height: 99vh;
+  width: 99vi;
+  max-height: 99vh;
+  max-width: 99vi;
 }
 
 .team-list-league-info {
   display: flex;
-  height: 20%;
+  height: 15%;
   background-color: #69d173;
 
 }
@@ -173,8 +177,62 @@
   display: flex;
   padding: 30px;
   font-size: 40px;
+  text-align: center;
   justify-content: center;
 
 }
 
 /*(FIN --- LEAGUE_TEAMS JSX STYLES*/
+
+
+/*(INICIO) --- TEAM_ROWS JSX STYLES*/
+.team-rows-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 99vh;
+}
+
+/*(FIN) --- TEAM_ROWS JSX STYLES*/
+
+
+/*(INICIO) --- TEAM_ROW JSX STYLES*/
+.team-row {
+
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(196, 196, 196);
+  border-radius: 5px;
+  border: 5px solid black;
+  margin: 5px auto;
+}
+
+.team-prop {
+  display: flex;
+  margin: auto;
+  padding-top: 15px;
+
+}
+
+/*(FIN) --- TEAM_ROW JSX STYLES*/
+
+/*(INICIO) --- TEAM_SPECS JSX STYLES*/
+
+.team-specs {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  max-height: 675px;
+}
+
+.spec {
+  display: flex;
+  height: 25%;
+  justify-content: center;
+}
+
+.team-specs-container {
+  padding: 50px;
+  background-color: rgb(161, 161, 161);
+}
+
+/*(FIN) --- TEAM_SPECS JSX STYLES*/

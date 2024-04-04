@@ -1,14 +1,31 @@
 import React from 'react'
+import { TeamSpecs } from './TeamSpecs'
 
 export const TeamRow = (props) => {
-    return (
-        <div className=''>
-            <div id='team-logo'>
-            </div>
-            <div id='team-name'></div>
-            <div id='team-score'></div>
-            <div id='team-trophies'></div>
+    {/*Aquí recibimos las props de TeamRows que son los datos del equipo */ }
 
+    const data = props
+
+    return (
+
+        <div className="col-md-12 col-sm-12 col-xs-12">
+
+            {/*El OnClick de cada teamRow va a recibir un método por props en el que cambiar el estado de selectedTeam */}
+            <div className='team-row' >
+                <div className='team-prop col-md-2 col-sm-2'>
+
+                </div>
+                <div className='team-prop col-md-2 col-sm-2'>
+                    <p>Equipo:</p>
+                </div>
+                <div className='team-prop col-md-2 col-sm-2'>
+                    <p>Puntos: </p>
+                </div>
+                <div className='team-prop col-md-2 col-sm-2'>
+                    <p>Trofeos:</p>
+                </div>
+
+            </div>
         </div>
     )
 }
