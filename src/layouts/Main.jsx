@@ -1,5 +1,12 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { useState } from "react"
 import { Header } from "../common/Header"
+
+import LeagueTeams from "../layouts/LeagueTeams"
+
 import LigaEsp from "../../public/img/LaLigaTransparente.png"
 import LigaIng from "../../public/img/PremierLeague.png"
 import LigaItl from "../../public/img/LegaCalcio.png"
@@ -14,8 +21,9 @@ export const Main = () => {
     const [inputVal, setInputVal] = useState("")
 
     //Array de ligas.
-    const ligas = [{ nombre: "La Liga (ESP)", img: LigaEsp, id: "" }, { nombre: "Premiere League (ENG)", img: LigaIng, id: "" }, { nombre: "Lega Calcio(ITL)", img: LigaItl, id: "" },
-    { nombre: "Ligue 1 (FRA)", img: LigaFr, id: "" }, { nombre: "Bundesliga (ALE)", img: LigaAl, id: "" }]
+    const ligas = [{ nombre: "La Liga (ESP)", img: LigaEsp, url: "" }, { nombre: "Premiere League (ENG)", img: LigaIng, url: "" }, { nombre: "Lega Calcio(ITL)", img: LigaItl, url: "" },
+    { nombre: "Ligue 1 (FRA)", img: LigaFr, url: "" }, { nombre: "Bundesliga (ALE)", img: LigaAl, url: "" }]
+
 
     const mostrarLiga = (index) => {
         return (
