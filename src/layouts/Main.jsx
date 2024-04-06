@@ -29,7 +29,7 @@ export const Main = () => {
     const [inputVal, setInputVal] = useState("")
 
     //Array de ligas con los datos necesarios en el resto de comoponentes.
-    const ligas = [{ nombre: "La Liga (ESP)", img: LigaEsp, url: La_Liga_URL }, { nombre: "Premiere League (ENG)", img: LigaIng, url: Premier_League_URL }, { nombre: "Lega Calcio(ITL)", img: LigaItl, url: Lega_Calcio_URL },
+    const ligas = [{ nombre: "La Liga (ESP)", img: LigaEsp, url: La_Liga_URL }, { nombre: "Premiere League (ENG)", img: LigaIng, url: Premier_League_URL }, { nombre: "Lega Calcio (ITL)", img: LigaItl, url: Lega_Calcio_URL },
     { nombre: "Ligue 1 (FRA)", img: LigaFr, url: Ligue_1_URL }, { nombre: "Bundesliga (ALE)", img: LigaAl, url: Bundesliga_URL }]
 
 
@@ -52,7 +52,7 @@ export const Main = () => {
                     }}>
                         LIGA ANTERIOR
                         <img src={btnAnterior}></img>
-                    </button >
+                    </button>
 
                 </div>
 
@@ -73,7 +73,7 @@ export const Main = () => {
                     }}>
                         LIGA SIGUIENTE
                         <img src={btnSiguiente}></img>
-                    </button >
+                    </button>
 
                 </div>
             </div>

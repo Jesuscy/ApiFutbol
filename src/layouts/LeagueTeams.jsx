@@ -17,12 +17,16 @@ export const LeagueTeams = (props) => {
 
     }
     /*
+    
       Para que los datos que se muestren en TeamSpecs sean los del equipo seleccionado por el usuario.
       hay que hacer un UseState que contenga un objeto Equipo que sea el seleccionado por el usuario --> TeamRow.jsx Aquí están las rows de cada equipo.
       y un useEffect que pinte <TeamSpecs data={ObjetoEquipo}/> cada vez que cambie el estado.
 
       Para obtener el valor de la fila seleccionada tenemos que cambiar selectedTeam desde TeamRow,
-      hay que cambiar el useState desde el elemento hijo.    Segunda pregunta --> EJEMPLO.PNG */
+      hay que cambiar el useState desde el elemento hijo.   
+      Segunda pregunta --> EJEMPLO.PNG
+
+     */
     return (
 
         <div className='teams-list-container'>
