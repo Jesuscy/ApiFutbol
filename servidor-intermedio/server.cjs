@@ -24,6 +24,7 @@ app.post('/api/football-info', async (req, res) => {
             }
         });
         res.json(response.data);
+        //TEST
         console.log(response.data)
     } catch (error) {
         console.error('Error al obtener los datos de la API:', error);
@@ -31,7 +32,7 @@ app.post('/api/football-info', async (req, res) => {
     }
 });
 
-// Iniciar el servidor
+//INICIA EL SERVER
 app.listen(PORT, () => {
     console.log(`Servidor intermedio escuchando en el puerto ${PORT}`);
 });
