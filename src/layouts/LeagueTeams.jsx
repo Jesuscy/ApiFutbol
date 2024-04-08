@@ -33,7 +33,9 @@ export const LeagueTeams = (props) => {
     const sendRequestAxios = async (url) => {
         try {
             const response = await axios.post('http://localhost:3002/api/football-info', { url })
-            console.log(response.data)
+            return (
+                response.data
+            )
         } catch (error) {
             console.log(error)
         }
@@ -79,7 +81,7 @@ export const LeagueTeams = (props) => {
             <div className="row team-specs-container">
                 <TeamSpecs data={selectedTeam} />
                 {/*Creamos TeamsRow pasandole los datos de la liga y el método de cambiar equipo*/}
-                <TeamRows data={data} selectTeam={selectTeamChild} />
+                <TeamRows data={data} selectTeam={selectTeamChild} sendRequest={sendRequestAxios} />
 
             </div>
 
