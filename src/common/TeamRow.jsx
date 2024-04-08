@@ -3,7 +3,7 @@ import { TeamSpecs } from './TeamSpecs'
 
 export const TeamRow = (props) => {
     {/*Aquí recibimos las props de TeamRows que son los datos del equipo */ }
-    const selectTeam = props.data.selectTeam
+    // const selectTeam = props.data.selectTeam
     const leagueData = props.data.data
 
 
