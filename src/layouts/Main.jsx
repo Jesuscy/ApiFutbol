@@ -114,7 +114,7 @@ export const Main = () => {
 
 
 
-                </main >
+                </main>
             </Router>
 
             {/*Falta hacer Footer */}
