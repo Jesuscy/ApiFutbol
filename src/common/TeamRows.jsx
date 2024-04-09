@@ -47,7 +47,7 @@ export const TeamRows = (props) => {
         <div className='col-md-6 team-rows-container'>
             {teams.map((team) => (
                 <TeamRow
-                    key={team.id} // Asegúrate de tener un key único para cada equipo
+                    key={team.id}
                     data={{
                         nombre: team.name,
                         jugadores: team.squad,
