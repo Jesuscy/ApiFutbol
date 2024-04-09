@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from "react"
 import LeagueIcon from '../../public/img/league-icon.png'
 import { TeamRows } from '../common/TeamRows'
 import { TeamSpecs } from '../common/TeamSpecs'
+import axios from 'axios'
 
 export const LeagueTeams = (props) => {
     //Recibe las porps del Router en Main
@@ -27,6 +28,44 @@ export const LeagueTeams = (props) => {
       Segunda pregunta --> EJEMPLO.PNG
 
      */
+
+
+    const sendRequestAxios = async (url) => {
+        try {
+            const response = await axios.post('http://localhost:3002/api/football-info', { url })
+            const result = await response.data
+
+            return (
+                result
+            )
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+
+
+    const sendRequestFetch = async (url) => {
+        try {
+            const response = await fetch('http://localhost:3002/api/football-info', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ url })
+            });
+            if (!response.ok) {
+                throw new Error('Error al obtener los datos de la API');
+            }
+            const data = await response.json();
+            console.log(data);
+        } catch (error) {
+            console.error('Error al obtener los datos de la API:', error);
+        }
+    };
+
+
+
     return (
 
         <div className='teams-list-container'>
@@ -42,9 +81,10 @@ export const LeagueTeams = (props) => {
             </div>
             {/*Row en la que renderizamos las Specs del equipo seleccionado y todos los equipos de la liga*/}
             <div className="row team-specs-container">
-                <TeamSpecs />
+                <TeamSpecs data={selectedTeam} />
                 {/*Creamos TeamsRow pasandole los datos de la liga y el método de cambiar equipo*/}
-                <TeamRows data={data} selectTeam={selectTeamChild} />
+                <TeamRows data={data} selectTeam={selectTeamChild} sendRequest={sendRequestAxios} />
+
             </div>
 
         </div>
