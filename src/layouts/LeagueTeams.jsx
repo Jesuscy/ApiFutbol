@@ -33,8 +33,10 @@ export const LeagueTeams = (props) => {
     const sendRequestAxios = async (url) => {
         try {
             const response = await axios.post('http://localhost:3002/api/football-info', { url })
+            const result = await response.data
+
             return (
-                response.data
+                result
             )
         } catch (error) {
             console.log(error)
