@@ -57,6 +57,7 @@ export const TeamRows = (props) => {
                         jugadores: team.squad,
                         estadio: team.venue,
                         fundacion: team.founded,
+                        entrenador: team.coach.name
                         
                     }}
                     selectTeam={selectTeam}
