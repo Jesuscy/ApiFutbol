@@ -262,3 +262,50 @@
 }
 
 /*(FIN) --- TEAM_SPECS JSX STYLES*/
+
+/*(INICIO --- TEAM_PLAYERS JSX STYLES)*/
+.player-rows-container {
+  flex-direction: column;
+  max-height: 800px;
+  overflow-y: scroll;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(44, 44, 44, 0.911);
+  padding: 50px;
+  border-radius: 5px;
+}
+
+.players-quit-rows {
+  display: flex;
+  height: 10%;
+  padding: 10px;
+}
+
+.players-quit-rows button {
+  background-color: red;
+
+  border-radius: 5px;
+}
+
+/*(FIN) --- TEAM_PLAYERS JSX STYLES)*/
+
+/*(INICIO --- TEAM_PLAYER JSX STYLES)*/
+.player-row {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(196, 196, 196);
+  border-radius: 5px;
+  border: 5px solid black;
+  margin: 5px auto;
+  padding: 30px;
+  scale: 0.9;
+}
+
+
+
+/*(FIN) --- TEAM_PLAYER JSX STYLES)*/

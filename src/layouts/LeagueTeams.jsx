@@ -4,6 +4,7 @@ import LeagueIcon from '../../public/img/league-icon.png'
 import { TeamRows } from '../common/TeamRows'
 import { TeamSpecs } from '../common/TeamSpecs'
 import axios from 'axios'
+import { TeamPlayers } from '../common/TeamPlayers'
 
 export const LeagueTeams = (props) => {
     //Recibe las porps del Router en Main
@@ -84,7 +85,7 @@ export const LeagueTeams = (props) => {
                 <TeamSpecs data={selectedTeam} />
                 {/*Creamos TeamsRow pasandole los datos de la liga y el método de cambiar equipo*/}
                 <TeamRows data={data} selectTeam={selectTeamChild} sendRequest={sendRequestAxios} />
-
+                <TeamPlayers data={selectedTeam} />
             </div>
 
         </div>
