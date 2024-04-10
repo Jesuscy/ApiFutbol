@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 #root {
-  width: 100vi;
-  height: 100%;
   font-family: "Press Start 2P", system-ui;
   background-color: rgb(196, 196, 196);
 }
@@ -136,7 +134,7 @@
   flex-direction: column;
   height: 99vh;
   width: 99vi;
-  max-height: 99vh;
+  max-height: 100vh;
   max-width: 99vi;
 }
 
@@ -189,7 +187,8 @@
 .team-rows-container {
   display: flex;
   flex-direction: column;
-  max-height: 99vh;
+  max-height: 720px;
+  overflow-y: scroll;
 }
 
 /*(FIN) --- TEAM_ROWS JSX STYLES*/
@@ -204,6 +203,18 @@
   border-radius: 5px;
   border: 5px solid black;
   margin: 5px auto;
+  padding: 10px;
+  scale: 0.9;
+}
+
+.team-row:hover {
+  background-color: rgb(139, 139, 139);
+  transform: scale(1.1);
+}
+
+.team-row p {
+  margin: auto;
+
 }
 
 .team-prop {
@@ -221,7 +232,12 @@
   display: flex;
   flex-direction: column;
   height: auto;
+  background-color: rgb(116, 113, 113);
   max-height: 675px;
+  border: 5px solid black;
+  border-radius: 5px;
+  padding: 20px;
+
 }
 
 .spec {
@@ -230,9 +246,16 @@
   justify-content: center;
 }
 
+.spec button {
+  width: 40%;
+  background-color: #2a66b4;
+}
+
 .team-specs-container {
   padding: 50px;
   background-color: rgb(161, 161, 161);
+  display: flex;
+  align-items: center;
 }
 
 /*(FIN) --- TEAM_SPECS JSX STYLES*/

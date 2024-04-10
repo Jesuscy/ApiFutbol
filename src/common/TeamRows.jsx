@@ -14,9 +14,12 @@ export const TeamRows = (props) => {
 
         const league = await sendRequest(leagueData.url)
         const teams = league.teams
+        console.log(teams)
         setTeams(teams)
     }
     useEffect(() => { getTeams() }, [leagueData.url])
+
+
 
     /*const renderTeams = async () => {
 
@@ -46,17 +49,21 @@ export const TeamRows = (props) => {
     return (
         <div className='col-md-6 team-rows-container'>
             {teams.map((team) => (
+                
                 <TeamRow
-                    key={team.id} // Asegúrate de tener un key único para cada equipo
+                    key={team.id}
                     data={{
                         nombre: team.name,
                         jugadores: team.squad,
                         estadio: team.venue,
-                        fundacion: team.founded
+                        fundacion: team.founded,
+                        entrenador: team.coach.name
+                        
                     }}
                     selectTeam={selectTeam}
                 />
-            ))}
+            )
+            )}
         </div>
     )
 }
